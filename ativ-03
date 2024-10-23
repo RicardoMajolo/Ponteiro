@@ -1,0 +1,28 @@
+/* 3- Faça um programa que leia dois valores inteiros para variáveis declaradas na rotina principal e
+chame uma função que receba dois ponteiros para essas variáveis. A função deve fazer a troca
+dos valores das variáveis. Os valores devem ser apresentados após a troca.*/
+
+#include <stdio.h>
+
+void trocarValores(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int valor1, valor2;
+
+    printf("Digite o primeiro valor: ");
+    scanf("%d", &valor1);
+    printf("Digite o segundo valor: ");
+    scanf("%d", &valor2);
+
+    trocarValores(&valor1, &valor2);
+
+    printf("Valores após a troca:\n");
+    printf("Valor 1: %d\n", valor1);
+    printf("Valor 2: %d\n", valor2);
+
+    return 0;
+}
