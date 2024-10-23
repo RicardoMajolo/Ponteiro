@@ -1,0 +1,31 @@
+1- /*Escreva um programa que declare variáveis do tipo inteiro, real e caractere. O programa deve
+possuir 3 ponteiros, cada um associado à uma das variáveis. Modifique os valores de cada variável
+usando os ponteiros. Os valores devem ser apresentados na tela antes e depois das modificações. */
+
+#include <stdio.h>
+
+int main() {
+    int inteiro = 10;
+    float real = 5.5;
+    char caractere = 'A';
+
+    int *ptrInteiro = &inteiro;
+    float *ptrReal = &real;
+    char *ptrCaractere = &caractere;
+
+    printf("Antes da modificação:\n");
+    printf("Inteiro: %d\n", *ptrInteiro);
+    printf("Real: %.2f\n", *ptrReal);
+    printf("Caractere: %c\n", *ptrCaractere);
+
+    *ptrInteiro = 20;
+    *ptrReal = 10.5;
+    *ptrCaractere = 'B';
+
+    printf("\nDepois da modificação:\n");
+    printf("Inteiro: %d\n", *ptrInteiro);
+    printf("Real: %.2f\n", *ptrReal);
+    printf("Caractere: %c\n", *ptrCaractere);
+
+    return 0;
+}
