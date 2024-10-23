@@ -1,0 +1,20 @@
+/* 2- Escreva um programa que contenha duas variáveis do tipo inteiro. Compare seus endereços e
+mostre o maior deles.*/
+
+#include <stdio.h>
+
+int main() {
+    int num1 = 5;
+    int num2 = 10;
+
+    int *ptrNum1 = &num1;
+    int *ptrNum2 = &num2;
+
+    if (ptrNum1 > ptrNum2) {
+        printf("O maior endereço é: %p\n", (void*)ptrNum1);
+    } else {
+        printf("O maior endereço é: %p\n", (void*)ptrNum2);
+    }
+
+    return 0;
+}
