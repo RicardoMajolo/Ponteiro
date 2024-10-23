@@ -1,0 +1,24 @@
+/*5- Crie um programa que contenha um procedimento que por parâmetro dois valores inteiros e um
+ponteiro. A função deve calcular a soma entre os números armazenados nas variáveis e armazenar
+o resultado na em uma variável local da rotina principal (main) através do uso do ponteiro.*/
+
+#include <stdio.h>
+
+void calcularSoma(int a, int b, int *resultado) {
+    *resultado = a + b;
+}
+
+int main() {
+    int A, B, soma;
+
+    printf("Digite o valor de A: ");
+    scanf("%d", &A);
+    printf("Digite o valor de B: ");
+    scanf("%d", &B);
+
+    calcularSoma(A, B, &soma);
+
+    printf("A soma é: %d\n", soma);
+
+    return 0;
+}
